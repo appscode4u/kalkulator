@@ -1,0 +1,453 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Window
+	x:Class="kalkulator.Window1" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	Title="kalkulator"
+	WindowStartupLocation="CenterScreen"
+	ResizeMode="CanMinimize"
+	Height="701"
+	Width="454">
+	<Grid
+		Width="436"
+		Height="662">
+		<GroupBox
+			Header="precyzja po przecinku:"
+			Foreground="#FF0066CC"
+			Width="412"
+			Height="51"
+			Grid.Column="0"
+			Grid.Row="0"
+			HorizontalAlignment="Left"
+			VerticalAlignment="Top"
+			Margin="14,61,0,0"
+			BorderBrush="#FF0066CC">
+			<Canvas>
+				<Slider
+					Maximum="6"
+					Minimum="2"
+					TickFrequency="1"
+					TickPlacement="Both"
+					IsSnapToTickEnabled="True"
+					HorizontalAlignment="Stretch"
+					VerticalAlignment="Stretch"
+					RenderTransformOrigin="3.5,0.5667"
+					Canvas.Left="8"
+					x:Name="BarVal"
+					Width="278"
+					ValueChanged="BarVal_ValueChanged"
+					Grid.Row="0"
+					Grid.Column="0"
+					SmallChange="1"
+					IsMoveToPointEnabled="True"
+					AutoToolTipPlacement="None"
+					Foreground="#FF0066CC"
+					BorderBrush="{x:Null}"
+					Background="{x:Null}"
+					OpacityMask="{x:Null}"
+					BorderThickness="0,0,0,0"
+					Value="4"
+					Canvas.Top="-2" />
+				<Label
+					Height="31"
+					Grid.Column="0"
+					Grid.Row="0"
+					HorizontalAlignment="Left"
+					VerticalAlignment="Top"
+					x:Name="RndVal"
+					Canvas.Left="289"
+					Width="111"
+					HorizontalContentAlignment="Center"
+					FontWeight="Medium"
+					FontSize="16"
+					Foreground="#FF0066CC"
+					VerticalContentAlignment="Top"
+					Content="4"
+					Canvas.Top="-4" />
+			</Canvas>
+		</GroupBox>
+		<Button
+			Width="56"
+			Height="56"
+			Content="&lt;-"
+			FontSize="20"
+			Grid.Column="0"
+			Grid.Row="0"
+			HorizontalAlignment="Left"
+			VerticalAlignment="Top"
+			Margin="309,6,0,0"
+			x:Name="BCOFNIJ"
+			Click="BCOFNIJ_Click"
+			Background="#FFEDA6A6" />
+		<TextBox
+			Text="0"
+			TextAlignment="Right"
+			HorizontalContentAlignment="Right"
+			VerticalContentAlignment="Center"
+			FontSize="35"
+			Padding="0,0,5,0"
+			x:Name="WYNIK"
+			Width="279"
+			Height="53"
+			Margin="17,8,0,0"
+			VerticalAlignment="Top"
+			HorizontalAlignment="Left"
+			Grid.Row="0"
+			Grid.Column="0"
+			FontWeight="Medium" />
+		<Button
+			Width="56"
+			Height="56"
+			Background="#FFB4B4B4"
+			Content="7"
+			FontSize="20"
+			x:Name="B7"
+			Click="B7_Click"
+			Grid.Column="0"
+			Grid.Row="0"
+			HorizontalAlignment="Left"
+			VerticalAlignment="Top"
+			Margin="17,113,0,0" />
+		<Button
+			Width="56"
+			Height="56"
+			Background="#FFB4B4B4"
+			Content="8"
+			FontSize="20"
+			x:Name="B8"
+			Click="B8_Click"
+			Grid.Column="0"
+			Grid.Row="0"
+			HorizontalAlignment="Left"
+			VerticalAlignment="Top"
+			Margin="81,113,0,0" />
+		<Button
+			Width="56"
+			Height="56"
+			Background="#FFB4B4B4"
+			Content="9"
+			FontSize="20"
+			x:Name="B9"
+			Click="B9_Click"
+			Grid.Column="0"
+			Grid.Row="0"
+			HorizontalAlignment="Left"
+			VerticalAlignment="Top"
+			Margin="145,113,0,0" />
+		<Button
+			Width="56"
+			Height="56"
+			Background="#FFB4B4B4"
+			Content="6"
+			FontSize="20"
+			x:Name="B6"
+			Click="B6_Click"
+			Grid.Column="0"
+			Grid.Row="0"
+			HorizontalAlignment="Left"
+			VerticalAlignment="Top"
+			Margin="145,177,0,0" />
+		<Button
+			Width="56"
+			Height="56"
+			Background="#FFB4B4B4"
+			Content="5"
+			FontSize="20"
+			x:Name="B5"
+			Click="B5_Click"
+			Grid.Column="0"
+			Grid.Row="0"
+			HorizontalAlignment="Left"
+			VerticalAlignment="Top"
+			Margin="81,177,0,0" />
+		<Button
+			Width="56"
+			Height="56"
+			Background="#FFB4B4B4"
+			Content="4"
+			FontSize="20"
+			x:Name="B4"
+			RenderTransformOrigin="0.5,0.5"
+			Click="B4_Click"
+			Grid.Column="0"
+			Grid.Row="0"
+			HorizontalAlignment="Left"
+			VerticalAlignment="Top"
+			Margin="17,177,0,0" />
+		<Button
+			Width="56"
+			Height="56"
+			Background="#FFB4B4B4"
+			Content="3"
+			FontSize="20"
+			x:Name="B3"
+			Click="B3_Click"
+			Grid.Column="0"
+			Grid.Row="0"
+			HorizontalAlignment="Left"
+			VerticalAlignment="Top"
+			Margin="145,241,0,0" />
+		<Button
+			Width="56"
+			Height="56"
+			Background="#FFB4B4B4"
+			Content="2"
+			FontSize="20"
+			x:Name="B2"
+			Click="B2_Click"
+			Grid.Column="0"
+			Grid.Row="0"
+			HorizontalAlignment="Left"
+			VerticalAlignment="Top"
+			Margin="81,241,0,0" />
+		<Button
+			Width="56"
+			Height="56"
+			Background="#FFB4B4B4"
+			Content="1"
+			FontSize="20"
+			x:Name="B1"
+			Click="B1_Click"
+			Grid.Column="0"
+			Grid.Row="0"
+			HorizontalAlignment="Left"
+			VerticalAlignment="Top"
+			Margin="17,241,0,0" />
+		<Button
+			Background="#FFB4B4B4"
+			Height="56"
+			Width="120"
+			Content="0"
+			FontSize="20"
+			x:Name="B0"
+			Click="B0_Click"
+			Grid.Column="0"
+			Grid.Row="0"
+			HorizontalAlignment="Left"
+			VerticalAlignment="Top"
+			Margin="17,305,0,0" />
+		<Button
+			Width="56"
+			Height="56"
+			Content=","
+			FontSize="20"
+			x:Name="BPRZECINEK"
+			Click="BPRZECINEK_Click"
+			Grid.Column="0"
+			Grid.Row="0"
+			HorizontalAlignment="Left"
+			VerticalAlignment="Top"
+			Margin="145,305,0,0"
+			Background="#FFF6FC7E" />
+		<Button
+			Width="56"
+			Height="56"
+			FontSize="20"
+			Content="+"
+			x:Name="BPLUS"
+			Click="BPLUS_Click"
+			Grid.Column="0"
+			Grid.Row="0"
+			HorizontalAlignment="Left"
+			VerticalAlignment="Top"
+			Margin="305,113,0,0"
+			Background="#FF7CDEF9" />
+		<Button
+			Width="56"
+			Height="56"
+			FontSize="20"
+			Content="CE"
+			Grid.Column="0"
+			Grid.Row="0"
+			HorizontalAlignment="Left"
+			VerticalAlignment="Top"
+			Margin="373,6.5,0,0"
+			x:Name="BCE"
+			Click="BCE_Click"
+			Background="#FFFC6767" />
+		<Button
+			Width="56"
+			Height="56"
+			FontSize="20"
+			Content="-"
+			x:Name="BMINUS"
+			Click="BMINUS_Click"
+			Grid.Column="0"
+			Grid.Row="0"
+			HorizontalAlignment="Left"
+			VerticalAlignment="Top"
+			Margin="369,113,0,0"
+			Background="#FF7CDEF9" />
+		<Button
+			Width="56"
+			Height="56"
+			FontSize="20"
+			Content="/"
+			x:Name="BDZIEL"
+			Click="BDZIEL_Click"
+			Grid.Column="0"
+			Grid.Row="0"
+			HorizontalAlignment="Left"
+			VerticalAlignment="Top"
+			Margin="369,177,0,0"
+			Background="#FF7CDEF9" />
+		<Button
+			Width="56"
+			Height="56"
+			FontSize="20"
+			Content="*"
+			x:Name="BMNOZ"
+			Click="BMNOZ_Click"
+			Grid.Column="0"
+			Grid.Row="0"
+			HorizontalAlignment="Left"
+			VerticalAlignment="Top"
+			Margin="305,177,0,0"
+			Background="#FF7CDEF9" />
+		<Button
+			Width="56"
+			Height="56"
+			FontSize="20"
+			Content="^"
+			x:Name="BSQR"
+			Click="BSQR_Click"
+			Grid.Column="0"
+			Grid.Row="0"
+			HorizontalAlignment="Left"
+			VerticalAlignment="Top"
+			Margin="305,241,0,0"
+			Background="#FF7CDEF9" />
+		<Button
+			Height="56"
+			FontSize="20"
+			Content="√"
+			RenderTransformOrigin="0.5893,0.5179"
+			Width="56"
+			x:Name="BROOT"
+			Click="BROOT_Click"
+			Grid.Column="0"
+			Grid.Row="0"
+			HorizontalAlignment="Left"
+			VerticalAlignment="Top"
+			Margin="369,241,0,0"
+			Background="#FF7CDEF9" />
+		<Button
+			Height="56"
+			FontSize="20"
+			Width="56"
+			Content="%"
+			x:Name="BMOD"
+			Click="BMOD_Click"
+			Background="#FF7CDEF9"
+			Grid.Column="0"
+			Grid.Row="0"
+			HorizontalAlignment="Right"
+			VerticalAlignment="Top"
+			Margin="0,304.8,75.1999999999999,0" />
+		<Button
+			Height="56"
+			FontSize="20"
+			Width="56"
+			x:Name="BWYNIK"
+			Content="="
+			Click="BWYNIK_Click"
+			Background="#FF4BF29B"
+			Grid.Column="0"
+			Grid.Row="0"
+			HorizontalAlignment="Right"
+			VerticalAlignment="Top"
+			Margin="0,304.8,11.1999999999999,0" />
+		<Button
+			FontSize="20"
+			x:Name="BPM"
+			Content="+/-"
+			Click="BPM_Click"
+			Height="56"
+			Width="88.199999999999989"
+			Grid.Column="0"
+			Grid.Row="0"
+			HorizontalAlignment="Left"
+			VerticalAlignment="Top"
+			Margin="208.8,113,0,0"
+			Background="#FFF6FC7E" />
+		<GroupBox
+			Header="Historia operacji:"
+			Width="417"
+			Height="293"
+			Grid.Column="0"
+			Grid.Row="0"
+			HorizontalAlignment="Left"
+			VerticalAlignment="Top"
+			Margin="8,369,0,0"
+			BorderBrush="#FF0066CC"
+			Foreground="#FF0066CC">
+			<Canvas
+				Width="402"
+				Height="272">
+				<DataGrid
+					x:Name="HISTORIA"
+					Background="Gray"
+					AlternatingRowBackground="DarkGray"
+					CanUserResizeColumns="False"
+					CanUserResizeRows="False"
+					FontSize="14"
+					VerticalContentAlignment="Center"
+					HorizontalContentAlignment="Center"
+					MouseRightButtonUp="RMBUAction"
+					Canvas.Left="2"
+					Width="400"
+					Canvas.Top="0"
+					Height="272">
+					<!-- formatowanie komórek -->
+					<DataGrid.CellStyle>
+						<Style
+							TargetType="DataGridCell">
+							<Setter
+								Property="TextBlock.TextAlignment"
+								Value="Center" />
+						</Style>
+					</DataGrid.CellStyle>
+					<DataGrid.Resources>
+						<!-- styl nagłówków kolumn -->
+						<Style
+							TargetType="{x:Type DataGridColumnHeader}">
+							<Setter
+								Property="Background"
+								Value="Turquoise" />
+							<Setter
+								Property="FontWeight"
+								Value="SemiBold" />
+							<Setter
+								Property="BorderThickness"
+								Value="0,0,1,2" />
+							<Setter
+								Property="BorderBrush"
+								Value="Black" />
+							<Setter
+								Property="HorizontalContentAlignment"
+								Value="Center" />
+						</Style>
+					</DataGrid.Resources>
+					<!-- nagłówki kolumn -->
+					<!-- nazwa nagłówka / mapowanie na dane z klasy Log / szerokość -->
+					<DataGrid.Columns>
+						<DataGridTextColumn
+							Header=" liczba 1"
+							Binding="{Binding Kliczba1}"
+							Width="100" />
+						<DataGridTextColumn
+							Header=" działanie"
+							Binding="{Binding Kdzialanie}"
+							Width="80" />
+						<DataGridTextColumn
+							Header=" liczba 2"
+							Binding="{Binding Kliczba2}"
+							Width="100" />
+						<DataGridTextColumn
+							Header=" wynik"
+							Binding="{Binding Kwynik}"
+							Width="*" />
+					</DataGrid.Columns>
+				</DataGrid>
+			</Canvas>
+		</GroupBox>
+	</Grid>
+</Window>
